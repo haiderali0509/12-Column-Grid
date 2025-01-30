@@ -90,6 +90,9 @@ main img{
     justify-self: end;
     grid-column: span 6;
   }
+  main{
+    padding: 0px;
+  }
   .grid{
     gap: 0px;
   }
