@@ -5,3 +5,95 @@ body {
   font-family: "Poppins";
   background: #f5f5f5;
 }
+.grid{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  /* grid-template-areas: 
+  'h1 h1 h1 h1 h1 h1 nav nav nav nav nav nav'; */
+  gap: 30px;
+}
+header{
+  align-items: center;
+  background: #fff;
+  padding: 1rem;
+}
+h1{
+  /* grid-area: h1; */
+  grid-column: span 6;
+}
+nav{
+  /* grid-area: nav; */
+  grid-column: 7/span 6;
+  justify-self: end;
+}
+nav a{
+  color: #333;
+  text-decoration: none;
+  margin-left:10px;
+}
+main{
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+  align-items: center;
+}
+main img{
+  grid-column: span 6;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.welcome{
+  grid-column: 8/ span 5;
+  margin-top: 20px;
+}
+.services{
+  grid-column: span 12;
+  justify-self: center;
+}
+.card{
+  grid-column: span 4;
+  background: #fff;
+  border-radius: 6px;
+  padding:10px 20px;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.05);
+}
+.m-navbar{
+  display: none;
+}
+@media screen and (max-width: 960px){
+  main img{
+    grid-column: 2/span 10;
+  }
+  .welcome{
+    grid-column: 3/span 8;
+    text-align: center;
+  }
+  .services{
+    grid-column: 3/ span 8;
+  }
+  .card{
+    grid-column: 3/ span 8 ;
+  }
+  
+}
+@media screen and (max-width:550px){
+  h1{
+    font-size:1.2rem;
+  }
+  nav{
+    display: none;
+  }
+  .m-navbar{
+    display: block;
+    height: 40px;
+    justify-self: end;
+    grid-column: span 6;
+  }
+  .grid{
+    gap: 0px;
+  }
+  /* a{
+    font-size: 0.6rem;
+  } */
+}
